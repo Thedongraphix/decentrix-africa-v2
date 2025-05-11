@@ -3,12 +3,12 @@ import ogImageSrc from "@images/social.png";
 
 
 export const SITE = {
-  title: "ScrewFast",
-  tagline: "Top-quality Hardware Tools",
-  description: "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs. Start exploring and contact our sales team for superior quality and reliability.",
-  description_short: "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs.",
-  url: "https://screwfast.uk",
-  author: "Emil Gulamov",
+  title: "Decentrix Africa",
+  tagline: "Web3 Marketing & Acquisition Agency",
+  description: "Decentrix Africa is a marketing and user acquisition agency helping businesses scale across Africa by acquiring new customers, leveraging our expertise in African market dynamics and Web3 technologies.",
+  description_short: "Revolutionizing Africa's digital future by unlocking the transformative potential of Web 3.0.",
+  url: "https://decentrix.africa",
+  author: "Decentrix Africa",
 };
 
 export const SEO = {
@@ -35,8 +35,8 @@ export const OG = {
   locale: "en_US",
   type: "website",
   url: SITE.url,
-  title: `${SITE.title}: : Hardware Tools & Construction Services`,
-  description: "Equip your projects with ScrewFast's top-quality hardware tools and expert construction services. Trusted by industry leaders, ScrewFast offers simplicity, affordability, and reliability. Experience the difference with user-centric design and cutting-edge tools. Start exploring now!",
+  title: `${SITE.title}: Web3 Marketing & User Acquisition Across Africa`,
+  description: "Decentrix Africa helps businesses scale across Africa through innovative Web3 marketing strategies, user acquisition campaigns, and deep expertise in African market dynamics. Empowering communities and creating sustainable opportunities across the continent.",
   image: ogImageSrc,
 };
 

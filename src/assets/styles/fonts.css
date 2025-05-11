@@ -1,0 +1,43 @@
+/* Font Styling for Decentrix Africa */
+
+/* Default font for entire site */
+html, body {
+  font-family: 'Jost', ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Headings use Space Grotesk */
+h1, h2, h3, h4, h5, h6, 
+.heading, .title, .display {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+}
+
+/* Body text uses Carme */
+p, span, li, input, textarea, 
+.body-text, .content {
+  font-family: 'Carme', sans-serif;
+}
+
+/* Specific utility classes */
+.font-jost {
+  font-family: 'Jost', ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-space {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.font-carme {
+  font-family: 'Carme', sans-serif;
+}
+
+/* Button text styling */
+button, 
+.btn, 
+[role="button"], 
+[type="button"], 
+[type="submit"], 
+[type="reset"] {
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+} 

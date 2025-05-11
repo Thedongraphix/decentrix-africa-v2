@@ -11,9 +11,9 @@
 :root {
   --border: hsla(var(--border-neutral), 0.4);
   --backdrop-color: #272727cc;
-  --sl-color-accent: #ff801f;
-  --sl-color-accent-high: #ffa057;
-  --sl-color-accent-low: #562800;
+  --sl-color-accent: #49A4F3;
+  --sl-color-accent-high: #EEAA38;
+  --sl-color-accent-low: #0A0340;
   --sl-color-black: #181818;
   --sl-color-gray-1: #eee;
   --sl-color-gray-2: #c2c2c2;
@@ -24,6 +24,10 @@
   --sl-color-white: #fff;
   --list-marker-color: #fb923c;
   --border-neutral: 0, 0%, 25.1%;
+  --sl-hue-accent: 217;
+  --sl-color-accent-low: hsl(var(--sl-hue-accent), 54%, 15%);
+  --sl-color-accent: hsl(var(--sl-hue-accent), 92%, 62%);
+  --sl-color-accent-high: hsl(var(--sl-hue-accent), 100%, 87%);
 }
 
 /* Light mode colors. */
@@ -44,6 +48,12 @@
   --sl-color-white: #181818;
   --list-marker-color: #fb923c;
   --border-yellow: 54.9, 96.7%, 88%;
+}
+
+.dark {
+  --sl-color-accent-low: #0A0340;
+  --sl-color-accent: #49A4F3;
+  --sl-color-accent-high: #EEAA38;
 }
 
 header {

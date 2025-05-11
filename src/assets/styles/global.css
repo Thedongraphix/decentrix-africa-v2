@@ -1,8 +1,42 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Carme&family=Jost:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
 @import 'tailwindcss';
 @import 'preline/variants.css';
 @plugin '@tailwindcss/forms';
 
 @custom-variant dark (&:is(.dark *));
+
+/* Custom Decentrix Africa colors */
+:root {
+  --color-primary: #0A0340;
+  --color-secondary: #49A4F3;
+  --color-accent: #EEAA38;
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.bg-accent {
+  background-color: var(--color-accent);
+}
 
 @theme {
   /* https://tailwindcss.com/docs/colors#customizing-your-colors */

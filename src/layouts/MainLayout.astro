@@ -5,6 +5,7 @@ import Navbar from "@components/sections/navbar&footer/Navbar.astro";
 import FooterSection from "@components/sections/navbar&footer/FooterSection.astro";
 import { SITE } from "@data/constants";
 import "@styles/global.css";
+import "@styles/fonts.css";
 
 // Setting expected props
 const {
@@ -27,7 +28,7 @@ interface Props {
 }
 ---
 
-<html lang={lang} class="scrollbar-hide lenis lenis-smooth scroll-pt-16">
+<html lang={lang} class="scrollbar-hide lenis lenis-smooth scroll-pt-16 font-sans">
   <head>
     {/* Adding metadata to the HTML document */}
     <Meta
@@ -52,10 +53,11 @@ interface Props {
     </script>
     <script>
       import "@scripts/lenisSmoothScroll.js";
+      import "@scripts/theme-colors.js";
     </script>
   </head>
   <body
-    class="bg-neutral-200 selection:bg-yellow-400 selection:text-neutral-700 dark:bg-neutral-800"
+    class="bg-neutral-200 font-body selection:bg-accent selection:text-neutral-700 dark:bg-neutral-800"
   >
     {/*
     Setting up the main structure of the page.

@@ -1,29 +1,29 @@
 {
-  "subTitle": "Ask us anything about our brand and products, and get factual responses.",
+  "subTitle": "Common questions about our Web3 marketing and user acquisition services.",
   "faqs": [
     {
-      "question": "What types of tools are included in the Starter Kit?",
-      "answer": "The Starter Kit features essential hand and power tools for diverse DIY projects, including hammers, drills, screwdrivers, and a variety of fasteners. It's a curated selection to help beginners and experienced DIYers alike tackle most home improvement tasks."
+      "question": "What Web3 technologies does Decentrix Africa specialize in?",
+      "answer": "We specialize in marketing and user acquisition strategies for a wide range of Web3 technologies including blockchain platforms, DeFi protocols, NFT marketplaces, DAOs, and Web3 gaming ecosystems. Our expertise spans Layer 1 and Layer 2 solutions with particular focus on creating adoption strategies tailored to African markets."
     },
     {
-      "question": "Can I upgrade from the Starter Kit to the Professional Toolbox?",
-      "answer": "Absolutely! You can upgrade to the Professional Toolbox at any time to access a wider range of high-quality tools, enjoy priority customer support, and receive exclusive content. Contact our support team for a seamless transition."
+      "question": "How does Decentrix Africa approach user acquisition in different African regions?",
+      "answer": "We employ a localized approach that considers each region's unique technological landscape, language preferences, regulatory environment, and cultural context. Our strategies combine digital campaigns with on-the-ground activations, leveraging both online communities and physical touchpoints like campus events to drive sustainable adoption."
     },
     {
-      "question": "What discounts are available for bulk orders through the Professional Toolbox plan?",
-      "answer": "Professional Toolbox members are entitled to exclusive discounts on bulk orders, the percentage of which may vary depending on the order volume. Get in touch with us to discuss your needs, and we'll provide a tailored discount structure."
+      "question": "What kind of community building services does Decentrix offer?",
+      "answer": "Our community building services include Discord/Telegram group management, content creation, virtual engagements, educational workshops, and offline event planning. We focus on creating vibrant, engaged communities that understand Web3 fundamentals and actively participate in project ecosystems."
     },
     {
-      "question": "What kind of customer support can I expect?",
-      "answer": "All our customers receive dedicated email support. With the Starter Kit, you'll receive our standard support, while the Professional Toolbox plan upgrades you to priority support, meaning faster response times and specialized assistance."
+      "question": "How does Decentrix help with market entry into Africa?",
+      "answer": "We provide comprehensive market entry services including feasibility studies, risk assessments, go-to-market strategy development, regulatory and compliance advisory, and localization services. Our deep understanding of Africa's diverse markets allows us to create customized approaches for each territory."
     },
     {
-      "question": "How current are the online resources and tutorials?",
-      "answer": "We regularly update our online resources and tutorials to reflect the latest trends in DIY and construction, as well as introductions to new tools and techniques. Our material aims to be comprehensive and user-friendly for all skill levels."
+      "question": "What metrics do you use to measure campaign success?",
+      "answer": "We track both quantitative metrics (user acquisition costs, conversion rates, community growth, engagement rates, token adoption) and qualitative indicators (brand sentiment, community quality, ecosystem participation). Our reporting provides transparent insights into performance across all marketing channels and activities."
     },
     {
-      "question": "Does ScrewFast offer services for large-scale construction projects?",
-      "answer": "Yes, our Enterprise Solutions are designed for larger companies requiring comprehensive services. We provide consultation, planning, and supply of high-grade tools and materials, as well as staffing solutions for substantial construction needs. Contact us for a customized quote."
+      "question": "Does Decentrix Africa offer educational resources about Web3?",
+      "answer": "Yes, education is a cornerstone of our approach. We create tailored educational content including workshops, webinars, guides, and training programs to help both clients and communities understand Web3 concepts. This educational focus helps drive more meaningful adoption and builds stronger, more knowledgeable communities."
     }
   ]
 }
