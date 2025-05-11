@@ -2,15 +2,15 @@
 
 /* CSS Variables for fonts - these make it easier to change fonts throughout the site */
 :root {
-  --font-primary: 'Jost', ui-sans-serif, system-ui, sans-serif;
-  --font-heading: 'Space Grotesk', sans-serif;
+  --font-primary: 'Carme', sans-serif;
+  --font-heading: 'Carme', sans-serif;
   --font-body: 'Carme', sans-serif;
   
   /* Font weights */
   --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
+  --font-weight-medium: 400;
+  --font-weight-semibold: 400;
+  --font-weight-bold: 400;
 }
 
 /* Default font for entire site */
@@ -18,7 +18,7 @@ html, body {
   font-family: var(--font-primary);
 }
 
-/* Headings use Space Grotesk */
+/* Headings use Carme */
 h1, h2, h3, h4, h5, h6, 
 .heading, .title, .display {
   font-family: var(--font-heading);

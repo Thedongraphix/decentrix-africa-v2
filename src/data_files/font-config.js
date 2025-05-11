@@ -8,16 +8,16 @@
 export const FONTS = {
   // Main font families
   primary: {
-    name: 'Jost',
-    fallback: 'ui-sans-serif, system-ui, sans-serif',
-    weights: '100..900', // Available weights
-    url: 'Jost:ital,wght@0,100..900;1,100..900',
+    name: 'Carme',
+    fallback: 'sans-serif',
+    weights: '400', // Available weights
+    url: 'Carme',
   },
   heading: {
-    name: 'Space Grotesk',
+    name: 'Carme',
     fallback: 'sans-serif',
-    weights: '300..700', // Available weights
-    url: 'Space+Grotesk:wght@300..700',
+    weights: '400', // Available weights
+    url: 'Carme',
   },
   body: {
     name: 'Carme',
@@ -29,7 +29,7 @@ export const FONTS = {
   // Helper functions
   getImportUrl() {
     // Constructs the Google Fonts import URL with all fonts
-    return `https://fonts.googleapis.com/css2?family=${this.body.url}&family=${this.primary.url}&family=${this.heading.url}&display=swap`;
+    return `https://fonts.googleapis.com/css2?family=Carme&display=swap`;
   },
   
   getCSSVars() {

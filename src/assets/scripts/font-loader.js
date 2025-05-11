@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
 // Helper function to apply fonts
 function applyFonts() {
   // Set font CSS variables directly via JavaScript
-  document.documentElement.style.setProperty('--font-primary', "'Jost', ui-sans-serif, system-ui, sans-serif");
-  document.documentElement.style.setProperty('--font-heading', "'Space Grotesk', sans-serif");
+  document.documentElement.style.setProperty('--font-primary', "'Carme', sans-serif");
+  document.documentElement.style.setProperty('--font-heading', "'Carme', sans-serif");
   document.documentElement.style.setProperty('--font-body', "'Carme', sans-serif");
   
   // Force application on key elements
@@ -35,7 +35,7 @@ function applyFonts() {
   
   // Apply fonts to specific element types
   elements.headings.forEach(el => {
-    el.style.fontFamily = 'Space Grotesk, sans-serif';
+    el.style.fontFamily = 'Carme, sans-serif';
   });
   
   elements.body.forEach(el => {
@@ -43,6 +43,10 @@ function applyFonts() {
   });
   
   elements.buttons.forEach(el => {
-    el.style.fontFamily = 'Jost, sans-serif';
+    el.style.fontFamily = 'Carme, sans-serif';
   });
+  
+  // Force Carme on the entire document as a fallback
+  document.body.style.fontFamily = 'Carme, sans-serif';
+  document.documentElement.style.fontFamily = 'Carme, sans-serif';
 } 
