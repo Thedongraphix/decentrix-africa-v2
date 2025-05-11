@@ -1,34 +1,64 @@
 /* Font Styling for Decentrix Africa */
 
+/* CSS Variables for fonts - these make it easier to change fonts throughout the site */
+:root {
+  --font-primary: 'Jost', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Carme', sans-serif;
+  
+  /* Font weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+}
+
 /* Default font for entire site */
 html, body {
-  font-family: 'Jost', ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-primary);
 }
 
 /* Headings use Space Grotesk */
 h1, h2, h3, h4, h5, h6, 
 .heading, .title, .display {
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 600;
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-semibold);
 }
 
 /* Body text uses Carme */
 p, span, li, input, textarea, 
 .body-text, .content {
-  font-family: 'Carme', sans-serif;
+  font-family: var(--font-body);
 }
 
 /* Specific utility classes */
-.font-jost {
-  font-family: 'Jost', ui-sans-serif, system-ui, sans-serif;
+.font-primary {
+  font-family: var(--font-primary);
 }
 
-.font-space {
-  font-family: 'Space Grotesk', sans-serif;
+.font-heading {
+  font-family: var(--font-heading);
 }
 
-.font-carme {
-  font-family: 'Carme', sans-serif;
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* Weight utility classes */
+.font-normal {
+  font-weight: var(--font-weight-normal);
+}
+
+.font-medium {
+  font-weight: var(--font-weight-medium);
+}
+
+.font-semibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+.font-bold {
+  font-weight: var(--font-weight-bold);
 }
 
 /* Button text styling */
@@ -38,6 +68,6 @@ button,
 [type="button"], 
 [type="submit"], 
 [type="reset"] {
-  font-family: 'Jost', sans-serif;
-  font-weight: 500;
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-medium);
 } 

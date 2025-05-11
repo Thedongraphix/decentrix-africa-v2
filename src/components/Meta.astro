@@ -94,6 +94,12 @@ const appleTouchIcon = await getImage({
 }
 {/* Define the character set, description, author, and viewport settings */}
 <meta charset="utf-8" />
+
+<!-- Preload key fonts to improve performance and ensure consistent loading across devices -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Carme&family=Jost:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
 <meta content={description} name="description" />
 <meta name="web_author" content={author} />
 <meta

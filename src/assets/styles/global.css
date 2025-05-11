@@ -5,6 +5,11 @@
 @import 'preline/variants.css';
 @plugin '@tailwindcss/forms';
 
+/* Force font family application - this helps overcome specificity issues */
+html {
+  font-family: 'Jost', ui-sans-serif, system-ui, sans-serif !important;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 /* Custom Decentrix Africa colors */
