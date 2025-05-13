@@ -1,0 +1,14 @@
+---
+// Component for displaying a custom PNG logo
+const { class: className = 'h-auto w-24' } = Astro.props;
+
+interface Props {
+  class?: string;
+}
+---
+
+<img 
+  src="/logo.png" 
+  alt="Decentrix Africa Logo" 
+  class={className} 
+/> 

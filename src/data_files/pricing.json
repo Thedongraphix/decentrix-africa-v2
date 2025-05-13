@@ -1,0 +1,40 @@
+{
+  "title": "Tailored Web3 Marketing Solutions",
+  "subTitle": "Strategic services to drive your growth across African markets.",
+  "badge": "Most popular",
+  "thirdOption": "Enterprise Solutions?",
+  "btnText": "Get a Custom Proposal",
+
+  "starterKit": {
+    "name": "Growth Launchpad",
+    "description": "Ideal for Web3 startups entering Africa",
+    "price": "3,500",
+    "cents": "",
+    "billingFrequency": "USD / month",
+    "features": [
+      "Market research & insights",
+      "Social media marketing",
+      "Community management (1 platform)",
+      "Basic educational content"
+    ],
+    "purchaseBtnTitle": "Start Your Growth Journey",
+    "purchaseLink": "#"
+  },
+
+  "professionalToolbox": {
+    "name": "Scale Accelerator",
+    "description": "For established projects expanding across Africa",
+    "price": "8,500",
+    "cents": "",
+    "billingFrequency": "USD / month",
+    "features": [
+      "Multi-channel user acquisition",
+      "Community management (all platforms)",
+      "Campus & street activations",
+      "Regulatory compliance advisory",
+      "Custom educational campaigns"
+    ],
+    "purchaseBtnTitle": "Accelerate Your Growth",
+    "purchaseLink": "#"
+  }
+}
