@@ -9,9 +9,9 @@ import TextAreaInput from "@components/ui/forms/input/TextAreaInput.astro";
 import Icon from "@components/ui/icons/Icon.astro";
 
 // Define the variables that will be used in this component
-const title: string = "Contact us";
+const title: string = "Contact Decentrix Africa";
 const subTitle: string =
-  "Have questions or want to discuss a project? Reach out, and let's craft the perfect solution with our tools and services.";
+  "Have questions about Web3 marketing and user acquisition in Africa? Reach out, and let's craft the perfect strategy for your business.";
 const formTitle: string = "Fill in the form below";
 const formSubTitle: string = "We'll get back to you in 1-2 business days.";
 ---
@@ -76,19 +76,21 @@ const formSubTitle: string = "We'll get back to you in 1-2 business days.";
 
       <!--ContactIconBlocks are used to display different methods of contacting, including visiting office, email, browsing knowledgebase, and FAQ.-->
       <div class="divide-y divide-neutral-300 dark:divide-neutral-700">
+        {/* Contact block for Web3 Resources section 
         <ContactIconBlock
-          heading="Knowledgebase"
-          content="Browse through all of our knowledgebase articles."
+          heading="Web3 Resources"
+          content="Browse through our library of Web3 marketing resources and case studies."
           isLinkVisible={true}
-          linkTitle="Visit guides & tutorials"
+          linkTitle="Visit resources" 
           linkURL="#"
           isArrowVisible={true}
           ><Icon name="question" />
         </ContactIconBlock>
+        */}
 
         <ContactIconBlock
           heading="FAQ"
-          content="Explore our FAQ for quick, clear answers to common queries."
+          content="Find answers to common questions about Web3 marketing in Africa."
           isLinkVisible={true}
           linkTitle="Visit FAQ"
           linkURL="#"
@@ -98,17 +100,17 @@ const formSubTitle: string = "We'll get back to you in 1-2 business days.";
 
         <ContactIconBlock
           heading="Visit our office"
-          content="UK ScrewFast"
+          content="Decentrix Africa Hq"
           isAddressVisible={true}
-          addressContent="72 Union Terrace, E10 4PE London"
+          addressContent="Westlands, Nairobi, Kenya"
           ><Icon name="mapPin" />
         </ContactIconBlock>
 
         <ContactIconBlock
           heading="Contact us by email"
-          content="Prefer the written word? Drop us an email at"
+          content="Have a direct question? Reach us at"
           isLinkVisible={true}
-          linkTitle="support@screwfast.uk"
+          linkTitle="info@decentrixafrica.com"
           linkURL="#"
           ><Icon name="envelopeOpen" />
         </ContactIconBlock>

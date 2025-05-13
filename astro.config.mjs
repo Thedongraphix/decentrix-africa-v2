@@ -66,13 +66,7 @@ export default defineConfig({
         },
         autogenerate: { directory: "guides" },
       },
-      {
-        label: "Tools & Equipment",
-        items: [
-          { label: "Tool Guides", link: "tools/tool-guides/" },
-          { label: "Equipment Care", link: "tools/equipment-care/" },
-        ],
-      },
+      
       {
         label: "Construction Services",
         autogenerate: { directory: "construction" },

@@ -35,15 +35,30 @@ interface Props {
     }
   </div>
   <div
-    class="flex flex-col items-center justify-center gap-y-2 sm:flex-row sm:gap-x-12 sm:gap-y-0 lg:gap-x-24"
+    class="flex flex-wrap items-center justify-center gap-8 sm:gap-12 lg:gap-16"
   >
-    <!-- Clients Group SVGs -->
+    <!-- Clients logos -->
     {
       partners.map((partner) => (
-        <a href={partner.href} target="_blank" rel="noopener noreferrer">
-              <div set:html={partner.icon} />
+        <a 
+          href={partner.href} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="logo-container flex items-center justify-center min-h-[80px]"
+        >
+          <div set:html={partner.icon} class="max-w-[180px] logo-wrapper" />
         </a>
       ))
     }
   </div>
 </section>
+
+<style>
+  /* Ensure logos display correctly */
+  .logo-wrapper :global(img) {
+    max-height: 80px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+</style>

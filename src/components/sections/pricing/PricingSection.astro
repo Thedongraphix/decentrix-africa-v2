@@ -6,17 +6,6 @@ import Icon from "@components/ui/icons/Icon.astro";
 // Define props from Astro
 const { pricing } = Astro.props;
 
-interface PricingSectionProps {
-  pricing: {
-    title: string;
-    subTitle: string;
-    starterKit: PackageInfo;
-    professionalToolbox: PackageInfo;
-    badge: string;
-    thirdOption: string;
-    btnText: string;
-  };
-}
 
 type PackageInfo = {
   name: string;

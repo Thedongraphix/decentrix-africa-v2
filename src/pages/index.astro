@@ -9,7 +9,6 @@ import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
 import TestimonialsSection from "@components/sections/testimonials/TestimonialsSection.astro";
 import PricingSection from "@components/sections/pricing/PricingSection.astro";
 import FAQ from "@components/sections/misc/FAQ.astro";
-import AnnouncementBanner from "@components/ui/banners/AnnouncementBanner.astro";
 import heroImage from "@images/hero-image.jpg";
 import faqs from "@data/faqs.json";
 import features from "@data/features.json";
@@ -25,17 +24,14 @@ import avatar3 from "@images/avatars/avatar3.jpg";
 import avatar4 from "@images/avatars/avatar4.jpg";
 import testimonialAvatar from "@images/avatars/testimonial.jpg";
 
+
 const avatarSrcs = [avatar1, avatar2, avatar3, avatar4];
 ---
 
 
 
 <MainLayout>
-  <AnnouncementBanner
-    btnId="dismiss-button"
-    btnTitle="Join our Web3 community"
-    url="#"
-  />
+ 
 
   <HeroSection
     title=`Revolutionizing Africa's Digital Future with <span
