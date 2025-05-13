@@ -47,15 +47,16 @@ interface Props {
     <!-- Fix for wallet extension conflicts -->
     <script is:inline src="/src/assets/scripts/wallet-fix.js"></script>
     <script is:inline>
-      // Script to handle dark mode. It will check if the theme is stored in localStorage or if dark theme is preferred by system settings
-      if (
-        localStorage.getItem("hs_theme") === "dark" ||
-        (!("hs_theme" in localStorage) &&
-          window.matchMedia("(prefers-color-scheme: dark)").matches)
-      ) {
+      // Script to handle theme. Defaults to light unless 'hs_theme' in localStorage is explicitly 'dark'.
+      if (localStorage.getItem("hs_theme") === "dark") {
         document.documentElement.classList.add("dark");
       } else {
+        // Default to light mode: remove dark class and ensure no hs_theme or set it to light.
         document.documentElement.classList.remove("dark");
+        // Optionally, to make light the persistent default until user changes:
+        // localStorage.setItem("hs_theme", "light"); 
+        // However, it's better if the theme components (ThemeSelect, Navbar script) handle setting hs_theme to 'light' when user picks light.
+        // For a true first-visit default to light, and respecting user choice later, just removing 'dark' is enough if no 'dark' is stored.
       }
     </script>
     <script>
