@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
 // Helper function to apply fonts
 function applyFonts() {
   // Set font CSS variables directly via JavaScript
-  document.documentElement.style.setProperty('--font-primary', "'Carme', sans-serif");
-  document.documentElement.style.setProperty('--font-heading', "'Carme', sans-serif");
-  document.documentElement.style.setProperty('--font-body', "'Carme', sans-serif");
+  document.documentElement.style.setProperty('--font-primary', "'Jost', sans-serif");
+  document.documentElement.style.setProperty('--font-heading', "'Jost', sans-serif");
+  document.documentElement.style.setProperty('--font-body', "'Jost', sans-serif");
   
   // Force application on key elements
   const elements = {
@@ -35,18 +35,18 @@ function applyFonts() {
   
   // Apply fonts to specific element types
   elements.headings.forEach(el => {
-    el.style.fontFamily = 'Carme, sans-serif';
+    el.style.fontFamily = 'Jost, sans-serif';
   });
   
   elements.body.forEach(el => {
-    el.style.fontFamily = 'Carme, sans-serif';
+    el.style.fontFamily = 'Jost, sans-serif';
   });
   
   elements.buttons.forEach(el => {
-    el.style.fontFamily = 'Carme, sans-serif';
+    el.style.fontFamily = 'Jost, sans-serif';
   });
   
-  // Force Carme on the entire document as a fallback
-  document.body.style.fontFamily = 'Carme, sans-serif';
-  document.documentElement.style.fontFamily = 'Carme, sans-serif';
+  // Force Jost on the entire document as a fallback
+  document.body.style.fontFamily = 'Jost, sans-serif';
+  document.documentElement.style.fontFamily = 'Jost, sans-serif';
 } 

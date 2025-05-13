@@ -2,11 +2,12 @@
 import Avatar from "@components/ui/avatars/Avatar.astro";
 import FullStar from "@components/ui/stars/FullStar.astro";
 import HalfStar from "@components/ui/stars/HalfStar.astro";
+import type { ImageSource } from "@utils/types";
 
 const { avatars, starCount = 0, rating, reviews } = Astro.props;
 
 interface Props {
-  avatars?: Array<string>;
+  avatars?: Array<ImageSource>;
   starCount?: number;
   rating?: string;
   reviews?: string;
@@ -46,13 +47,11 @@ interface Props {
             <!-- Adding additional half-star -->
             <HalfStar />
           </div>
-          <p class="text-neutral-800 dark:text-neutral-200">
-            <Fragment set:html={rating} />
+          <p class="text-neutral-800 dark:text-neutral-200" set:html={rating}>
           </p>
         </div>
         <div class="text-sm text-neutral-800 dark:text-neutral-200 sm:ps-5">
-          <p>
-            <Fragment set:html={reviews} />
+          <p set:html={reviews}>
           </p>
         </div>
       </div>

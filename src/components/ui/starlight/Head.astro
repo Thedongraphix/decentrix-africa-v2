@@ -1,15 +1,26 @@
 ---
-import type { Props } from "@astrojs/starlight/props";
 import StarlightHead from "@astrojs/starlight/components/Head.astro";
 import VtbotStarlight from "astro-vtbot/components/starlight/Base.astro";
+
+interface HeadProps {
+  lang?: string;
+  dir?: "ltr" | "rtl";
+  title?: string;
+  description?: string;
+}
+
+const props = Astro.props as HeadProps;
 ---
 
-<VtbotStarlight {...Astro.props} viewTransitionsFallback="animate">
-  <StarlightHead {...Astro.props}><slot /></StarlightHead>
-  <script>
+<StarlightHead {...props}>
+  <VtbotStarlight slot="head" />
+  
+  <script slot="head">
     import "@scripts/lenisSmoothScroll.js";
   </script>
-</VtbotStarlight>
+  
+  <slot />
+</StarlightHead>
 
 <style is:global>
   /* Slow down Chrome's default animation */

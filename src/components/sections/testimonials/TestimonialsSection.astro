@@ -1,6 +1,7 @@
 ---
 import TestimonialItem from "./TestimonialItem.astro";
 import StatsGrid from "../../ui/blocks/StatsGrid.astro";
+import type { ImageSource } from "@utils/types";
 
 const {
   title,
@@ -21,7 +22,7 @@ type Testimonial = {
   content: string;
   author: string;
   role: string;
-  avatarSrc: string;
+  avatarSrc: ImageSource;
 };
 
 // TypeScript type for stats.
@@ -42,12 +43,12 @@ type StatProps = {
       <!-- Title and Subtitle -->
       <div class="mb-8">
         <h2
-          class="mb-2 text-3xl font-bold text-neutral-800 dark:text-neutral-200 lg:text-4xl"
+          class="mb-2 text-3xl font-extrabold text-neutral-800 dark:text-neutral-200 lg:text-4xl"
         >
           {title}
         </h2>
         {subTitle &&
-        <p class="text-neutral-600 dark:text-neutral-400">
+        <p class="text-neutral-600 font-medium dark:text-neutral-400">
           {subTitle}
         </p>
       }

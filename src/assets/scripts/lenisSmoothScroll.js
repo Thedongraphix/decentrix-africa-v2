@@ -7,3 +7,6 @@ import Lenis from "lenis";
 const lenis = new Lenis({
     autoRaf: true,
 });
+
+// Export lenis instance for potential use elsewhere
+export default lenis;

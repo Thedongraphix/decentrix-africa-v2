@@ -1,6 +1,6 @@
 ---
-import { Image } from "astro:assets";
 import Icon from "../../ui/icons/Icon.astro";
+import type { ImageSource } from "@utils/types";
 
 const { content, author, role, avatarSrc } = Astro.props;
 
@@ -8,7 +8,7 @@ interface Props {
   content: string;
   author: string;
   role: string;
-  avatarSrc: string;
+  avatarSrc: ImageSource;
 }
 ---
 
@@ -16,20 +16,18 @@ interface Props {
   <Icon name="quotation" />
 
   <div class="relative z-10">
-    <p class="text-xl italic text-neutral-800 dark:text-neutral-200">
-      {content}
+    <p class="text-xl italic text-neutral-800 dark:text-neutral-200" set:html={content}>
     </p>
   </div>
 
   <div class="mt-6">
     <div class="flex items-center">
       <div class="shrink-0">
-        <Image
+        <img
           class="h-8 w-8 rounded-full"
-          src={avatarSrc}
+          src={typeof avatarSrc === 'string' ? avatarSrc : avatarSrc.src}
           alt="Avatar Description"
-          loading={"eager"}
-          inferSize
+          loading="eager"
         />
       </div>
       <div class="ms-4 grow">

@@ -5,36 +5,28 @@ interface Props {
   title?: string;
 }
 
+// Define the user SVG as a string
+const userSVG = `<svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
+</svg>`;
+
+// Define the button classes
 const baseClasses =
-  "flex items-center gap-x-2 text-base md:text-sm font-medium text-neutral-600 ring-zinc-500 transition duration-300 focus-visible:ring-3 outline-hidden";
+  "flex items-center justify-center gap-x-2 rounded-lg px-2.5 py-2 text-sm font-semibold text-neutral-800 outline-hidden ring-zinc-500 transition duration-300 hover:bg-neutral-100 focus-visible:ring-3 dark:text-neutral-200 dark:ring-zinc-200 dark:hover:bg-neutral-700 dark:focus:outline-hidden";
 const hoverClasses = "hover:text-orange-400 dark:hover:text-orange-300";
 const darkClasses =
   "dark:border-neutral-700 dark:text-neutral-400 dark:ring-zinc-200 dark:focus:outline-hidden";
 const mdClasses = "md:my-6 md:border-s md:border-neutral-300 md:ps-6";
 const txtSizeClasses = "2xl:text-base";
-const userSVG = `<svg
-      class="h-4 w-4 shrink-0"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-  >
-    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
-    <circle cx="12" cy="7" r="4"></circle>
-  </svg>`;
 ---
 
 <button
   type="button"
   class={`${baseClasses} ${hoverClasses} ${darkClasses} ${mdClasses} ${txtSizeClasses}`}
-  data-hs-overlay="#hs-toggle-between-modals-login-modal"
+  data-hs-overlay="#hs-slide-down-animation-modal"
+  aria-controls="hs-slide-down-animation-modal"
+  aria-label="Toggle Login Modal"
 >
-  <!-- About Fragment: https://docs.astro.build/en/basics/astro-syntax/#fragments -->
-
-  <Fragment set:html={userSVG} />
+  <span set:html={userSVG} />
   {title}
 </button>

@@ -5,41 +5,26 @@ interface Props {
   title: string;
 }
 
-const baseClasses =
-  "inline-flex w-full items-center justify-center gap-x-2 rounded-lg px-4 py-3 text-sm dark:text-neutral-400 font-medium text-neutral-600 shadow-xs transition duration-300 focus-visible:ring-3 outline-hidden";
-const borderClasses = "border border-neutral-200 dark:border-neutral-700";
-const bgColorClasses =
-  "bg-neutral-50 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-900";
-const disableClasses = "disabled:pointer-events-none disabled:opacity-50";
-const ringClasses = "ring-zinc-500 dark:ring-zinc-200";
-const googleSVG = `<svg
-    class="h-auto w-4"
-    width="46"
-    height="47"
-    viewBox="0 0 46 47"
-    fill="none"
-  >
-    <path
-      d="M46 24.0287C46 22.09 45.8533 20.68 45.5013 19.2112H23.4694V27.9356H36.4069C36.1429 30.1094 34.7347 33.37 31.5957 35.5731L31.5663 35.8669L38.5191 41.2719L38.9885 41.3306C43.4477 37.2181 46 31.1669 46 24.0287Z"
-      fill="#4285F4"></path>
-    <path
-      d="M23.4694 47C29.8061 47 35.1161 44.9144 39.0179 41.3012L31.625 35.5437C29.6301 36.9244 26.9898 37.8937 23.4987 37.8937C17.2793 37.8937 12.0281 33.7812 10.1505 28.1412L9.88649 28.1706L2.61097 33.7812L2.52296 34.0456C6.36608 41.7125 14.287 47 23.4694 47Z"
-      fill="#34A853"></path>
-    <path
-      d="M10.1212 28.1413C9.62245 26.6725 9.32908 25.1156 9.32908 23.5C9.32908 21.8844 9.62245 20.3275 10.0918 18.8588V18.5356L2.75765 12.8369L2.52296 12.9544C0.909439 16.1269 0 19.7106 0 23.5C0 27.2894 0.909439 30.8731 2.49362 34.0456L10.1212 28.1413Z"
-      fill="#FBBC05"></path>
-    <path
-      d="M23.4694 9.07688C27.8699 9.07688 30.8622 10.9863 32.5344 12.5725L39.1645 6.11C35.0867 2.32063 29.8061 0 23.4694 0C14.287 0 6.36607 5.2875 2.49362 12.9544L10.0918 18.8588C11.9987 13.1894 17.25 9.07688 23.4694 9.07688Z"
-      fill="#EB4335"></path>
-  </svg>`;
+const googleSVG = `<svg class="h-4 w-4 flex-none fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<path d="M12.0003 4.75C13.7703 4.75 15.3553 5.36002 16.6053 6.54998L20.0303 3.12C17.9502 1.19 15.2353 0 12.0003 0C7.31028 0 3.25526 2.69 1.28027 6.60998L5.27028 9.70498C6.21525 6.86002 8.87028 4.75 12.0003 4.75Z"/>
+<path d="M23.49 12.27C23.49 11.48 23.42 10.73 23.3 10H12V14.51H18.47C18.18 15.99 17.33 17.25 16.07 18.1L19.93 21.1C22.19 19 23.49 15.92 23.49 12.27Z"/>
+<path d="M5.26998 14.2949C5.02498 13.5699 4.88501 12.7999 4.88501 11.9999C4.88501 11.1999 5.01998 10.4299 5.26998 9.7049L1.28501 6.60986C0.47998 8.22986 0 10.0599 0 11.9999C0 13.9399 0.47998 15.7699 1.28501 17.3899L5.26998 14.2949Z"/>
+<path d="M12.0004 24.0001C15.2404 24.0001 17.9654 22.9201 19.9304 21.1001L16.0704 18.1001C15.0054 18.8401 13.6204 19.2501 12.0004 19.2501C8.8704 19.2501 6.21537 17.1401 5.2704 14.2951L1.27539 17.3901C3.25537 21.3101 7.3104 24.0001 12.0004 24.0001Z"/>
+</svg>`;
+
+const baseClass = "w-full flex items-center justify-center gap-2 rounded-md p-3 text-base font-medium text-zinc-900";
+const hoverClass = "hover:bg-zinc-100/90";
+const focusClass = "focus-visible:outline focus-visible:outline-2 focus-visible:outline-yellow-600";
+const disabledClass = "disabled:pointer-events-none disabled:opacity-50";
+const borderClass = "border border-zinc-500/90";
+const darkModeClasses = "dark:border-zinc-500 dark:text-zinc-300 dark:hover:border-yellow-600 dark:hover:text-white";
 ---
 
 <button
   type="button"
-  class={`${baseClasses} ${borderClasses} ${bgColorClasses} ${disableClasses} ${ringClasses}`}
+  class={`${baseClass} ${hoverClass} ${focusClass} ${disabledClass} ${borderClass} ${darkModeClasses}`}
 >
-  <!-- About Fragment: https://docs.astro.build/en/basics/astro-syntax/#fragments -->
-
-  <Fragment set:html={googleSVG} />
+  <!-- Google SVG Icon -->
+  <span set:html={googleSVG} />
   {title}
 </button>

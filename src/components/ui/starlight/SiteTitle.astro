@@ -1,11 +1,10 @@
 ---
 import mainLogo from "@images/starlight/screwfast_logo_dark.svg?raw";
 import docsLogo from "@images/starlight/docs_logo.svg?raw";
-import type { Props } from "@astrojs/starlight/props";
 
-
+// Define the locale and paths without using Props type
+const locale = Astro.params.locale ? Astro.params.locale + "/" : "";
 const main = "/";
-const locale = Astro.props.locale ? Astro.props.locale + "/" : "";
 const docs = "/" + locale + "welcome-to-docs/";
 ---
 

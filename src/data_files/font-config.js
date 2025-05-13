@@ -8,28 +8,28 @@
 export const FONTS = {
   // Main font families
   primary: {
-    name: 'Carme',
+    name: 'Jost',
     fallback: 'sans-serif',
-    weights: '400', // Available weights
-    url: 'Carme',
+    weights: '100,200,300,400,500,600,700,800,900',
+    url: 'Jost:wght@100;200;300;400;500;600;700;800;900',
   },
   heading: {
-    name: 'Carme',
+    name: 'Jost',
     fallback: 'sans-serif',
-    weights: '400', // Available weights
-    url: 'Carme',
+    weights: '100,200,300,400,500,600,700,800,900',
+    url: 'Jost:wght@100;200;300;400;500;600;700;800;900',
   },
   body: {
-    name: 'Carme',
+    name: 'Jost',
     fallback: 'sans-serif',
-    weights: '400', // Available weights
-    url: 'Carme',
+    weights: '100,200,300,400,500,600,700,800,900',
+    url: 'Jost:wght@100;200;300;400;500;600;700;800;900',
   },
   
   // Helper functions
   getImportUrl() {
     // Constructs the Google Fonts import URL with all fonts
-    return `https://fonts.googleapis.com/css2?family=Carme&display=swap`;
+    return `https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap`;
   },
   
   getCSSVars() {

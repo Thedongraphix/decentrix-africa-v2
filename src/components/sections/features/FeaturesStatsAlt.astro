@@ -1,60 +1,76 @@
 ---
 import { Image } from "astro:assets";
-import product5 from "@images/features-image.avif";
 
-// Define props from Astro
-const { title, subTitle, benefits } = Astro.props;
-
-// Define TypeScript interface for props
 interface Props {
-  title: string;
-  subTitle?: string;
-  benefits?: Array<string>;
+  title?: string;
+  description?: string;
+  features?: Array<string>;
+  src?: any;
+  alt?: string;
 }
 
-// Define SVG marker to be used in the component
-const ListItemMarker: string = `<svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mt-0.5 h-6 w-6 text-orange-400 dark:text-orange-300 flex-none"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>`;
+// Extract properties from component props
+const { title, description, features, src, alt } = Astro.props;
+
+// SVG to display checkmark before list items
+const ListItemMarker = `<div class="flex-shrink-0">
+  <svg class="flex-shrink-0 h-5 w-5 text-accent" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M9.307 12.248a.75.75 0 1 0 1.05 1.069l1.527-1.504a.75.75 0 0 0 0-1.069L8.37 7.24a.75.75 0 0 0-1.05 1.069L9.613 10.5 6 10.493c-.41 0-.75.336-.75.748s.34.752.75.752h3.613l-2.3 2.255Z" />
+  </svg>
+</div>`;
 ---
 
-<section
-  class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
->
-  <!-- Grid -->
-  <div class="lg:grid lg:grid-cols-12 lg:items-center lg:gap-16">
-    <div class="lg:col-span-7">
-      <Image class="rounded-xl" src={product5} alt="Mockup of floating boxes" />
-    </div>
-    <div class="mt-5 sm:mt-10 lg:col-span-5 lg:mt-0">
-      <div class="space-y-6 sm:space-y-8">
-        <div class="space-y-2 md:space-y-4">
-          <h2
-            class="text-balance text-3xl font-bold text-neutral-800 dark:text-neutral-200 lg:text-4xl"
-          >
-            {title}
-          </h2>
-          {
-            subTitle && (
-              <p class="text-pretty text-neutral-600 dark:text-neutral-400">
-                {subTitle}
-              </p>
-            )
-          }
+<div class="mx-auto grid max-w-[85rem] gap-6 px-4 py-10 sm:px-6 lg:grid-cols-12 lg:gap-16 lg:px-8 lg:py-14 2xl:max-w-full">
+  <!-- Left column with image, conditionally rendered -->
+  <div class="lg:col-span-6">
+    {src && alt && (
+      <div class="relative ml-4">
+        <Image
+          class="h-auto rounded-xl aspect-video"
+          src={src}
+          alt={alt}
+          loading={"eager"}
+          format={"avif"}
+        />
+        <!-- Decorative blue glow gradient for the image -->
+        <div
+          class="absolute inset-0 -z-[1] -m-4 h-full w-full rotate-3 rounded-xl bg-secondary/30 blur-xl dark:bg-secondary/20"
+        >
         </div>
-        {
-          benefits && (
-            <ul class="space-y-2 sm:space-y-4">
-              {benefits.map((item) => (
-                <li class="flex space-x-3">
-                  <Fragment set:html={ListItemMarker} />
-                  <span class="text-pretty text-base font-medium text-neutral-600 dark:text-neutral-400">
-                    {item}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          )
-        }
       </div>
-    </div>
+    )}
   </div>
-</section>
+
+  <!-- Right column with content and feature list -->
+  <div class="lg:col-span-6">
+    <!-- Title and description -->
+    <div class="mb-6 space-y-6">
+      {title && (
+        <h2
+          class="text-balance text-3xl font-extrabold tracking-tight text-neutral-800 dark:text-neutral-200 lg:text-4xl lg:leading-tight"
+        >
+          {title}
+        </h2>
+      )}
+      {description && (
+        <p class="text-pretty leading-relaxed text-neutral-600 dark:text-neutral-400">
+          {description}
+        </p>
+      )}
+    </div>
+
+    <!-- Feature list with checkmarks -->
+    {
+      features && features.length > 0 && (
+        <ul class="space-y-4">
+          {features.map((feature) => (
+            <li class="flex gap-x-2">
+              <span set:html={ListItemMarker} />
+              <span class="text-neutral-800 dark:text-neutral-200">{feature}</span>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </div>
+</div>

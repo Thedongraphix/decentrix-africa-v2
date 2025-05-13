@@ -17,7 +17,6 @@ interface Props {
     {index === 1 || index === 2 ? <Icon name="arrowUp" /> : null}
     {count}
   </div>
-  <p class="text-sm text-neutral-600 dark:text-neutral-400 sm:text-base">
-    {description}
+  <p class="text-sm text-neutral-600 dark:text-neutral-400 sm:text-base" set:html={description}>
   </p>
 </li>

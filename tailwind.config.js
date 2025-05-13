@@ -10,8 +10,8 @@ export default {
       },
       fontFamily: {
         'sans': ['Jost', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        'display': ['Space Grotesk', 'sans-serif'],
-        'body': ['Carme', 'sans-serif'],
+        'display': ['Jost', 'sans-serif'],
+        'body': ['Jost', 'sans-serif'],
       },
     },
   },
@@ -27,10 +27,10 @@ export default {
           fontFamily: 'Jost, ui-sans-serif, system-ui, sans-serif',
         },
         'h1, h2, h3, h4, h5, h6': {
-          fontFamily: 'Space Grotesk, sans-serif',
+          fontFamily: 'Jost, sans-serif',
         },
         'p, span, li, a': {
-          fontFamily: 'Carme, sans-serif',
+          fontFamily: 'Jost, sans-serif',
         },
       });
     },

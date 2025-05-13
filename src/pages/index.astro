@@ -15,18 +15,20 @@ import faqs from "@data/faqs.json";
 import features from "@data/features.json";
 import pricing from "@data/pricing.json";
 import featureImage from "@images/kabarak.jpg";
-import construction from "@images/users.avif";
+import construction from "@images/panel.avif";
 import tools from "@images/sui guy.avif";
 import dashboard from "@images/general.avif";
 import { partnersData } from "@/data_files/constants";
+import avatar1 from "@images/avatars/avatar1.jpg";
+import avatar2 from "@images/avatars/avatar2.jpg";
+import avatar3 from "@images/avatars/avatar3.jpg";
+import avatar4 from "@images/avatars/avatar4.jpg";
+import testimonialAvatar from "@images/avatars/testimonial.jpg";
 
-const avatarSrcs: Array<string> = [
-  "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
-  "https://images.unsplash.com/photo-1531927557220-a9e23c1e4794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
-  "https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&&auto=format&fit=facearea&facepad=3&w=300&h=300&q=80",
-  "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
-];
+const avatarSrcs = [avatar1, avatar2, avatar3, avatar4];
 ---
+
+
 
 <MainLayout>
   <AnnouncementBanner
@@ -37,12 +39,10 @@ const avatarSrcs: Array<string> = [
 
   <HeroSection
     title=`Revolutionizing Africa's Digital Future with <span
-        class="text-accent dark:text-accent">Web3</span>`
-    subTitle="Empowering businesses to scale across Africa through innovative Web3 marketing strategies and user acquisition expertise."
+        class="text-primary dark:text-primary font-extrabold">Web3</span>`
+    subTitle="Empowering businesses to scale across Africa through innovative Web3 marketing strategies and user acquisition expertise by Decentrix Africa."
     primaryBtn="Explore Services"
     primaryBtnURL="/services"
-    secondaryBtn="Contact Our Team"
-    secondaryBtnURL="/contact"
     withReview={true}
     avatars={avatarSrcs}
     rating=`<span class="font-bold">4.9</span> / 5`
@@ -67,7 +67,7 @@ const avatarSrcs: Array<string> = [
   />
 
   <FeaturesNavs
-    title=`Leverage <span class="text-accent dark:text-accent">Decentrix Africa's</span> expertise to accelerate your Web3 adoption across the continent.`
+    title=`Leverage <span class="text-primary dark:text-primary font-extrabold">Decentrix Africa's</span> expertise to accelerate your Web3 adoption across the continent.`
     tabs={[
       {
         heading: "Strategic Market Research",
@@ -107,8 +107,7 @@ const avatarSrcs: Array<string> = [
           "Decentrix Africa transformed our approach to the African market. Their deep understanding of Web3 adoption challenges and innovative solutions helped us build a thriving community across multiple countries. Their localized strategy was exactly what we needed.",
         author: "Sarah Kimani",
         role: "Chief Marketing Officer | BlockchainConnect",
-        avatarSrc:
-          "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
+        avatarSrc: testimonialAvatar,
       },
     ]}
     statistics={[

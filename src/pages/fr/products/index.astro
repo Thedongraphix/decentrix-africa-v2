@@ -10,6 +10,10 @@ import TestimonialsSectionAlt from "@components/sections/testimonials/Testimonia
 // Importing necessary functions from Astro
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
+import avatar1 from "@images/avatars/avatar1.jpg";
+import avatar2 from "@images/avatars/avatar2.jpg";
+import avatar3 from "@images/avatars/avatar3.jpg";
+import testimonialAvatar from "@images/avatars/testimonial.jpg";
 
 // Fetching all the product related content and sorting it by main.id
 const product: CollectionEntry<"products">[] = (
@@ -33,8 +37,7 @@ const testimonials = [
       "Depuis que nous avons adopté les outils matériels de ScrewFast, l'efficacité sur nos chantiers de construction a explosé. La durabilité des boulons hexagonaux et la précision des vis machine sont tout simplement inégalées. C'est rafraîchissant de travailler avec une entreprise qui comprend vraiment les exigences quotidiennes de l'industrie.",
     author: "Jason Clark",
     role: "Contremaître de chantier | TopBuild",
-    avatarSrc:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
+    avatarSrc: testimonialAvatar,
     avatarAlt: "Description de l'image",
   },
 
@@ -43,8 +46,7 @@ const testimonials = [
       "En tant que designer d'intérieur, je suis toujours à la recherche de matériaux et d'outils de haute qualité qui m'aident à donner vie à mes visions. L'assortiment de vis mixtes de ScrewFast a révolutionné mes projets, offrant le mélange parfait de qualité et de variété. Le support client exceptionnel était la cerise sur le gâteau !",
     author: "Maria Gonzalez",
     role: "Designer d'intérieur | Creative Spaces",
-    avatarSrc:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
+    avatarSrc: testimonialAvatar,
     avatarAlt: "Description de l'image",
   },
 
@@ -53,8 +55,7 @@ const testimonials = [
       "Je suis menuisier professionnel depuis plus de 15 ans, et je peux sincèrement dire que les boulons et écrous à tarauder de ScrewFast sont parmi les meilleurs que j'ai utilisés. Ils adhèrent comme aucun autre, et j'ai une confiance totale dans chaque joint et élément. De plus, le service est impeccable - ils se soucient vraiment du succès de mon projet.",
     author: "Richard Kim",
     role: "Menuisier-Maître | WoodWright",
-    avatarSrc:
-      "https://images.unsplash.com/photo-1474176857210-7287d38d27c6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
+    avatarSrc: testimonialAvatar,
     avatarAlt: "Description de l'image",
   },
 ];
@@ -130,8 +131,8 @@ const ogTitle = "Outils Matériels | ScrewFast";
   {/* Features statistics section */}
   <FeaturesStatsAlt
     title="Pourquoi choisir ScrewFast ?"
-    subTitle="Transformez vos idées en résultats tangibles avec les outils ScrewFast. Que vous commenciez par un croquis sur un coin de table ou plongiez dans un projet de construction complet, nos outils sont conçus pour vous aider à construire en toute confiance."
-    benefits={[
+    description="Transformez vos idées en résultats tangibles avec les outils ScrewFast. Que vous commenciez par un croquis sur un coin de table ou plongiez dans un projet de construction complet, nos outils sont conçus pour vous aider à construire en toute confiance."
+    features={[
       "Outils robustes et fiables pour des performances durables.",
       "Solutions innovantes adaptées aux besoins de construction modernes.",
       "Support client dédié au succès de votre projet.",

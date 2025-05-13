@@ -1,5 +1,5 @@
 /* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Carme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import 'tailwindcss';
 @import 'preline/variants.css';
@@ -7,7 +7,7 @@
 
 /* Force font family application - this helps overcome specificity issues */
 html {
-  font-family: 'Carme', sans-serif !important;
+  font-family: 'Jost', sans-serif !important;
 }
 
 @custom-variant dark (&:is(.dark *));
@@ -16,7 +16,7 @@ html {
 :root {
   --color-primary: #0A0340;
   --color-secondary: #49A4F3;
-  --color-accent: #EEAA38;
+  --color-accent: #0A0340;
 }
 
 .text-primary {
