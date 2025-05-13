@@ -7,7 +7,6 @@ import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 import enStrings from "@utils/navigation";
 import frStrings from "@utils/fr/navigation";
 import CustomLogo from "@components/CustomLogo.astro";
-import LanguagePicker from "@components/ui/LanguagePicker.astro";
 
 // Select the correct translation based on the page's lang prop:
 const strings = Astro.currentLocale === "fr" ? frStrings : enStrings;
@@ -95,7 +94,6 @@ const homeUrl = Astro.currentLocale === "fr" ? "/fr" : "/";
         <div class="md:flex-none">
           <PrimaryCTA title="Join Us" url="/contact" noArrow={true} />
         </div>
-        <LanguagePicker />
         <!-- ThemeIcon component specifically for larger screens -->
         <!-- <span class="hidden md:inline-block">
         
