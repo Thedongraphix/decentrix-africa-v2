@@ -1,8 +1,8 @@
 ---
 import { getImage } from "astro:assets";
 import { OG, SITE } from "@data/constants";
-import faviconSvgSrc from "@images/icon.svg";
-import faviconSrc from "@images/icon.png";
+import faviconSvgSrc from "@images/decentrix.svg";
+import faviconSrc from "@images/decentrix.png";
 
 // Default properties for the Meta component
 const {
@@ -120,7 +120,7 @@ const appleTouchIcon = await getImage({
 <link rel="sitemap" href="/sitemap-index.xml" />
 
 {/* Links for favicons */}
-<link href="/favicon.ico" rel="icon" sizes="any" type="image/x-icon" />
+
 <link href={faviconSvg.src} rel="icon" type="image/svg+xml" sizes="any" />
 <meta name="mobile-web-app-capable" content="yes" />
 <link href={appleTouchIcon.src} rel="apple-touch-icon" />

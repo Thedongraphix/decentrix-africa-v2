@@ -6,8 +6,6 @@ import Icon from "@components/ui/icons/Icon.astro";
 // Define props from Astro
 const { pricing } = Astro.props;
 
-
-
 ---
 
 <section
@@ -48,7 +46,7 @@ const { pricing } = Astro.props;
           >{pricing.starterKit.billingFrequency}</span
         >
       </div>
-      <!-- Features list - automatically created by mapping over `features` array -->
+      <!-- Features list - automatically created by mapping over features array -->
       <ul class="mb-6 space-y-2 text-neutral-300">
         {
           pricing.starterKit.features.map((feature: string) => (
@@ -98,13 +96,12 @@ const { pricing } = Astro.props;
           >{pricing.professionalToolbox.billingFrequency}</span
         >
       </div>
-      <!-- Features list - automatically created by mapping over `features` array -->
+      <!-- Features list for Professional Toolbox -->
       <ul class="mb-6 space-y-2 text-orange-100">
         {
           pricing.professionalToolbox.features.map((feature: string) => (
             <li class="flex items-center gap-1.5">
               <Icon name="checkCircle" />
-
               <span>{feature}</span>
             </li>
           ))
