@@ -13,7 +13,7 @@ interface Props {
 }
 // Define button classes
 const BUTTON_CLASS =
-  "dark:hover:bg-primary/20 rounded-xl p-4 text-start outline-hidden ring-zinc-500 transition duration-300 hover:bg-primary/10 focus-visible:ring-3 hs-tab-active:bg-primary/5 hs-tab-active:shadow-md hs-tab-active:hover:border-transparent dark:ring-zinc-200 dark:focus:outline-hidden dark:hs-tab-active:bg-primary/30 md:p-5";
+  "dark:hover:bg-primary/20 rounded-xl p-4 text-start outline-hidden ring-zinc-500 transition duration-300 hover:bg-primary/10 focus-visible:ring-3 hs-tab-active:bg-primary/10 hs-tab-active:shadow-lg hs-tab-active:border-l-4 hs-tab-active:border-primary hs-tab-active:hover:border-primary dark:ring-zinc-200 dark:focus:outline-hidden dark:hs-tab-active:bg-primary/30 md:p-5";
 
 /*
 first: This property should be set to true for the initial TabNav component in your list
@@ -38,7 +38,9 @@ Example:
 >
   <!-- Slot for additional content -->
   <span class="flex">
-    <slot />
+    <span class="hs-tab-active:text-primary hs-tab-active:bg-primary/10 p-2 rounded-full">
+      <slot />
+    </span>
     <!-- Container for the heading and content of the tab -->
     <span class="ms-6 grow">
       <!-- Heading of the tab, changes color when active -->

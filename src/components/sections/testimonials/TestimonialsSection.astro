@@ -44,8 +44,8 @@ type StatProps = {
       <div class="mb-8">
         <h2
           class="mb-2 text-3xl font-extrabold text-neutral-800 dark:text-neutral-200 lg:text-4xl"
+          set:html={title}
         >
-          {title}
         </h2>
         {subTitle &&
         <p class="text-neutral-600 font-medium dark:text-neutral-400">

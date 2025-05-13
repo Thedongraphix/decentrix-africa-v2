@@ -20,8 +20,8 @@ const firstClass = first ? "" : "hidden";
 // Set class based on 'second' property
 // If 'second' is present, use an alternate style for the image
 const secondClass = second
-  ? "shadow-xl aspect-16/9 bg-neutral-300 dark:bg-neutral-600 object-cover p-2 shadow-neutral-200 rounded-xl dark:shadow-neutral-900/[.2]"
-  : "shadow-xl aspect-16/9 object-cover shadow-neutral-200 rounded-xl dark:shadow-neutral-900/[.2]";
+  ? "shadow-xl aspect-16/9 bg-neutral-300 dark:bg-neutral-600 object-cover p-2 shadow-neutral-200 rounded-xl dark:shadow-neutral-900/[.2] transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl"
+  : "shadow-xl aspect-16/9 object-cover shadow-neutral-200 rounded-xl dark:shadow-neutral-900/[.2] transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl";
 
 /*
 first: This property should be set to true for the initial TabContent component
@@ -41,7 +41,7 @@ This is the full example:
 ---
 
 <!-- Container for tab content that controls visibility and accessibility -->
-<div id={id} role="tabpanel" class={firstClass} aria-labelledby={aria}>
+<div id={id} role="tabpanel" class={`${firstClass} transition-opacity duration-500`} aria-labelledby={aria}>
   <!-- Astro Image component to display the image with dynamic classes based on the 'second' property -->
   <Image
     src={src}
@@ -50,7 +50,7 @@ This is the full example:
     draggable={"false"}
     format={"avif"}
     loading={"eager"}
-    width={800}
-    height={450}
+    width={1200}
+    height={675}
   />
 </div>
