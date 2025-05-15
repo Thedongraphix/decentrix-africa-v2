@@ -7,12 +7,12 @@ import RightSection from "@components/ui/blocks/RightSection.astro";
 import FeaturesStats from "@components/sections/features/FeaturesStats.astro";
 
 // Import necessary images
-import blueprints from "@images/blueprints-image.avif";
+import customEducation from "@images/web3 edu.avif";
 import personWorking from "@images/person-working.avif";
-import beforeAfter from "@images/before-after.avif";
-import constructionWorkers from "@images/construction-workers.avif";
-import aerialView from "@images/aerial-view.avif";
-import usingTools from "@images/using-tools.avif";
+import beforeAfter from "@images/third pic.jpg";
+import marketEntry from "@images/sui guy.jpg";
+import entryServices from "@images/entry photo.jpg";
+import communityTools from "@images/community.jpg";
 import progressBuilding from "@images/progress-building.avif";
 import underConstruction from "@images/under-construction.avif";
 import { SITE } from "@data/constants";
@@ -40,7 +40,7 @@ const articles: Article[] = [
     subTitle:
       "Navigating Africa's diverse Web3 landscape requires deep local understanding. Our expert research team provides comprehensive insights into regional market dynamics, user behavior patterns, and competitive analysis. We identify opportunities for growth and adoption across different African territories, ensuring your strategy is built on solid data.",
     single: false,
-    imgOne: blueprints,
+    imgOne: customEducation,
     imgOneAlt: "Analytics dashboard showing African market research data",
     imgTwo: personWorking,
     imgTwoAlt: "Decentrix team analyzing market trends",
@@ -62,9 +62,9 @@ const articles: Article[] = [
     subTitle:
       "Successfully entering African markets requires specialized knowledge of local regulations, culture, and business practices. We provide comprehensive market entry services including feasibility studies, risk assessments, and go-to-market strategy development. Our localization expertise ensures your Web3 project resonates with local audiences while navigating regulatory frameworks.",
     single: false,
-    imgOne: constructionWorkers,
+    imgOne: marketEntry,
     imgOneAlt: "Team conducting a localization workshop",
-    imgTwo: aerialView,
+    imgTwo: entryServices,
     imgTwoAlt: "Map highlighting Decentrix's reach across Africa",
   },
   {
@@ -72,7 +72,7 @@ const articles: Article[] = [
     title: "Community Building & Engagement",
     subTitle:
       "Building vibrant, engaged communities is essential for Web3 adoption. We provide comprehensive community management across Discord, Telegram, and other platforms, creating content and virtual engagements that educate and inspire. Our offline event planning and campus activations create meaningful connections between your project and potential users.",
-    img: usingTools,
+    img: communityTools,
     imgAlt: "Community event with participants engaging in Web3 education",
   },
   {
@@ -125,7 +125,7 @@ const ogTitle = "Web3 Marketing & User Acquisition Services | Decentrix Africa";
     subTitle="At Decentrix Africa, we provide comprehensive Web3 marketing and user acquisition solutions tailored to African markets. Our deep understanding of blockchain technologies and regional dynamics enables us to create strategies that drive meaningful adoption and community growth."
     btnExists={true}
     btnTitle="Schedule a Consultation"
-    btnURL="#"
+    btnURL="/contact"
   />
   {/* RightSection and LeftSection contain details about various services along with pertinent imagery.
   They alternate for variety in design.
