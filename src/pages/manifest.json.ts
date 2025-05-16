@@ -1,7 +1,7 @@
 import type { APIRoute, ImageMetadata } from "astro";
 import { getImage } from "astro:assets";
-import icon from "@images/icon.png";
-import maskableIcon from "@images/icon-maskable.png";
+import icon from "@images/icons.svg";
+import maskableIcon from "@images/icons.svg";
 
 interface Favicon {
   purpose: 'any' | 'maskable' | 'monochrome';

@@ -1,9 +1,8 @@
 ---
 import { getImage } from "astro:assets";
 import { OG, SITE } from "@data/constants";
-import faviconSvgSrc from "@images/decentrix.svg";
-import faviconSrc from "@images/decentrix.png";
-
+import faviconSvgSrc from "@images/icons.svg";
+import faviconSrc from "@images/icons.svg";
 // Default properties for the Meta component
 const {
   meta = "Decentrix Africa - Revolutionizing Africa's Digital Future with Web3",
@@ -39,9 +38,9 @@ const twitterImage = socialImageRes.src;
 const fullPath = Astro.url.pathname;
 const alternateLanguageLinks = Object.entries(languages)
   .map(([lang, prefix]) => {
-    const cleanPath = fullPath.replace(/^\/(fr|en)\//, "/");
+    const cleanPath = fullPath.replace(/^\/(fr|en)\/\//, "/");
     const prefixedPath = prefix ? `/${prefix}${cleanPath}` : cleanPath;
-    const normalizedPath = prefixedPath.replace(/\/\/+/g, "/");
+    const normalizedPath = prefixedPath.replace(/\/\/\/+/g, "/");
     const href = `${siteUrl}${normalizedPath}`;
     
     return `<link rel="alternate" hreflang="${lang}" href="${href}" />`;
@@ -121,9 +120,9 @@ const appleTouchIcon = await getImage({
 
 {/* Links for favicons */}
 
-<link href={faviconSvg.src} rel="icon" type="image/svg+xml" sizes="any" />
-<meta name="mobile-web-app-capable" content="yes" />
-<link href={appleTouchIcon.src} rel="apple-touch-icon" />
-<link href={appleTouchIcon.src} rel="shortcut icon" />
+<link href={faviconSvgSrc.src} rel="icon" type="image/svg+xml" />
+<link href={faviconSrc.src} rel="icon" type="image/png" />
+<link href={faviconSrc.src} rel="apple-touch-icon" />
+
 {/* Set theme color */}
 <meta name="theme-color" content="#0A0340" />
